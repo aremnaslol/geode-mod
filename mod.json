@@ -1,0 +1,50 @@
+{
+	"geode": "6.0.0-alpha.2",
+	"gd": {
+		"win": "2.2091"
+	},
+	"version": "v1.0.0",
+	"id": "demo.gd-neural-pilot",
+	"name": "GD Neural Pilot",
+	"developer": "demo",
+	"description": "Look-ahead autoplayer with an in-game menu. Single-player use.",
+	"tags": ["utility"],
+	"settings": {
+		"autopilot": {
+			"type": "bool",
+			"name": "Autopilot",
+			"description": "Master ON/OFF switch for the autoplayer.",
+			"default": false
+		},
+		"reaction-ms": {
+			"type": "float",
+			"name": "Reaction time (ms)",
+			"description": "Delay between the bot deciding and the input being applied. 0 = frame-perfect.",
+			"default": 0.0,
+			"min": 0.0,
+			"max": 250.0,
+			"control": { "slider": true, "input": true }
+		},
+		"prediction-distance": {
+			"type": "float",
+			"name": "Prediction distance (units)",
+			"description": "How far ahead of the player the bot scans and simulates. 30 units = 1 block.",
+			"default": 480.0,
+			"min": 150.0,
+			"max": 1200.0,
+			"control": { "slider": true, "input": true }
+		},
+		"menu-key": {
+			"type": "keybind",
+			"name": "Menu key",
+			"description": "Opens and closes the Neural Pilot menu.",
+			"default": "F7"
+		},
+		"toggle-key": {
+			"type": "keybind",
+			"name": "Autopilot key",
+			"description": "Turns the autopilot on and off.",
+			"default": "F6"
+		}
+	}
+}
